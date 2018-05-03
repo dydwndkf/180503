@@ -1,14 +1,5 @@
 import requests
 
-'''
-r = requests.get("https://goo.gl/nVLutc")
-print(r.history)
-for h in r.history:
-    print (h.url)
-print (r.url)
-'''
-
-
 def isSpam(content, spamLinkDomains, redirectionDepth):
     splitcontent = content.split(" ")
     for i in range(len(splitcontent)):
@@ -25,5 +16,3 @@ def isSpam(content, spamLinkDomains, redirectionDepth):
     else:
         return False
 
-print(isSpam("spam spam https://goo.gl/nVLutc", ["http://www.filekok.com"], 2))
-#print(isSpam("spam spam http://go.microsoft.com/fwlink/?linkid=99104", ["https://support.office.com/en-us/article/HA100319991"], 2))
